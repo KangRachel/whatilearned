@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>반응선택자,상태선택자</title>
+    <style>
+    ul > li {
+        width: 300px;
+        padding: 20px;
+        margin: auto; /*중앙 정렬*/
+        background: turquoise;
+        list-style: none; /* 리스트의 점 없앰*/
+        font-weight: bold;
+
+        
+    }
+
+    li:first-child {
+        border-radius: 10px 10px 0 0; /*왼쪽 위 오른쪽 위 10px씩 굴곡*/
+    }
+
+    li:last-child {
+        border-radius: 0 0 10px 10px; /*왼쪽 아래, 오른쪽 아래 10px씩 굴곡*/
+    }
+
+    li:nth-child(2n+1) {
+        background: violet; /*홀수번째 li태그에 다른 컬러 지정*/
+    }
+
+    li:hover {
+        color: red;
+        font-size: 2em; /*li태그에 커서를 대면 폰트사이즈, 컬러 변경*/
+    }
+
+    input {
+        padding:10px;
+        margin: 10px;
+    }
+
+    input:focus {
+        border: 3px solid red; /*input태그에 커서가 클릭되면 크기가 커짐*/
+        padding: 20px;
+
+    }
+
+    input[type="password"] {  /*input태그 type속성이 password인 태그의 컬러를 변경*/
+        color: red;
+    }
+
+    .formcontent {
+        width: 300px;
+        margin: auto;
+    }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+        <li>menu6</li>
+        <li>menu7</li>
+        <li>menu8</li>
+        <li>menu9</li>
+        <li>menu10</li>
+    </ul>
+    <div class="formcontent">
+        <form>
+            <input type="text" name="username" value="이름을 입력하세요">
+            <input type="text" name="userId" value="id를 입력하세요">
+            <input type="password" name="usepw" value="000000">
+        </form>
+    </div>
+</body>
+</html>
