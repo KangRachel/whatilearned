@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>grid</title>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        img {
+            margin: 0;
+            height: 400px; 
+            }
+
+        #gridbox {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        }
+        /*디스플레이 속성이 grid인 박스를 만듬. 박스 내의 div 태그들을 각각 어떤 위치에
+        화면 내 얼만큼 배치할지, 가로와 세로를 어떤 비율로 할당할지grid-template으로 설정할 수 있다.*/
+
+        #griditem1 {
+            background: #e4dccf;
+            grid-row: 1 / 2;
+            grid-column: 1 / 5;
+            text-align: center;
+        }
+
+        #griditem2 {
+            background: #e3dac9;
+            grid-row: 2 / 6;
+            grid-column: 2 / 4;
+        }
+        #griditem3 {
+            background: #e3dac9;
+            grid-row: 2 / 6;
+            grid-column: 1 / 2;
+        }
+        #griditem4 {
+            background: #e3dac9;
+            grid-row: 2 / 6;
+            grid-column: 4 / 5;
+            overflow: hidden;
+            
+        }
+        #footer {
+            grid-row: 6 / 7;
+            grid-column: 1 /5;
+            background: #d5af8a;
+            text-align: center;
+        }
+
+        li {
+            font-size: 2em;
+            list-style: none;
+            padding-top: 10px;
+        }
+
+        p {
+            font-size: 1.5em;
+            padding: 10px;
+        }
+        h1 {
+            font-size: 3em;
+        }
+
+        #footerText {
+            font-size: 1em;
+        }
+    
+    </style>
+</head>
+<body>
+    <div id="gridbox">
+        <div id="griditem1"><h1>Cake</h1></div>
+        <div id="griditem2"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, fuga. Explicabo atque animi ex voluptatem cupiditate vero consectetur dolor accusamus vitae, itaque distinctio reiciendis blanditiis esse voluptas omnis asperiores dolores.</p></div>
+        <div id="griditem3">
+            <ul>
+                <li>Home </li>
+                <li>Content</li>
+                <li>Board</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        <div id="griditem4">
+            <img src="./cake.jpeg" alt="cake">
+        </div>
+        <div id="footer"> <p id="footerText">Rachel kang | South Korea, jeju</p></div>
+    </div>
+</body>
+</html>
