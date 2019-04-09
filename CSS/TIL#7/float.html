@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Float</title>
+    <style>
+        h1, p, li {
+            font-family: poppine;
+            padding: 10px;
+        }
+        p {
+            margin: 0;
+        }
+        #wrap {
+            width: 1000px;
+            margin: 0 auto;
+            background: thistle;
+            padding: 10px;
+            overflow: hidden;
+            /* overflow: hidden; 블록요소는 float 된 요소를 인식하지 못함
+            떠있는 content를 부모 div가 인식하게 하려면 overflow: hidden; 을 넣어줘야함*/
+        }
+        .header , .footer{
+            background: wheat;
+            width: 800px;
+            height: 100px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        #content {
+            width : 800px;
+            background: wheat;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        #article {
+         width : 450px;
+         text-align: center;
+        }
+        .content-item {
+            background: steelblue;
+            padding: 10px;
+            align-items: center;
+            border: 1px solid #cccccc;
+            border-radius: 15px;
+            float: left;
+            width: 140px;
+            height: 249px;
+        }
+        .footer {
+            overflow: hidden;
+        }
+        .footer-item {
+            background: rgb(223, 178, 171);
+            float: left;
+            width: 398px;
+            height: 100px;
+            border: 1px solid #cccccc;
+            border-radius: 15px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="header"><h1>web page title</h1></div>
+        <div id="content">
+            <div class="content-item">
+                <ul>
+                    <li>Menu</li>
+                    <li>Hone</li>
+                    <li>Board</li>
+                    <li>Contents</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div id="article" class="content-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non accusantium commodi eligendi debitis quis, voluptatem fuga dolores architecto illum sequi beatae, quae laudantium enim corrupti voluptates dolorum! Commodi, adipisci molestias.</div>
+            <div class="content-item"><img src="" alt="banner img"></div>
+        </div>
+        <div class="footer">
+            <div class="footer-item">
+                <p>Rachel Kang | Jeju South Korea</p>
+           </div>
+            <div class="footer-item">
+                <img src="" alt="logo">
+            </div>
+        </div>
+    
+</body>
+</html>
